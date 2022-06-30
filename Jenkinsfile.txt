@@ -55,9 +55,11 @@ pipeline {
 			//Code ends for stage Unit Test
 			//code start for code civerage
 			stage('Code Coverage'){
-				steps([
-					$class: 'JacocoPublisher'
-					])
+				steps{
+					step([
+						$class: 'JacocoPublisher'
+						])
+				}		
 			}
 			//code ends
 		
